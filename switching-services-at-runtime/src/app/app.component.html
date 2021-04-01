@@ -1,0 +1,26 @@
+<div class="content" role="main">
+  <div class="card-container">
+    <div>
+      <h2 (click)="switchService()">Hello {{name}} - active service: {{ this.switchingService.serviceName }} - click me to switch it!</h2>
+      <button (click)="labelFunc1.innerHTML = switchingService.instance.getRole()">Get Role</button>
+      <label #labelFunc1></label>
+      <br/>
+      <button (click)="switchingService.instance.compareName(name, this.switchingService.serviceName)">Compare name</button>
+      <br/>
+      <button (click)="labelFunc3.innerHTML = this.switchingService.instance.create()">Do nothing</button>
+      <label #labelFunc3></label>
+    </div>
+  </div>
+
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet></router-outlet>
